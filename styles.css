@@ -1,0 +1,171 @@
+
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Serif&family=Poppins&display=swap');
+
+:root{
+
+    /*Font Colors*/
+    --pri-text:#000000;
+    --sec-text:#A9A9A9;
+
+    /*Font Sizes*/
+    --font-sml:calc(1rem);
+    --font-reg:calc(2rem);
+    --font-lrg:calc(3rem);
+    --font-xlrg:calc(4rem);
+    
+    /*Fonts*/
+    --font-mon:'Montserrat', sans-serif;
+    --font-pop:'Poppins', sans-serif;
+    --font-pt:'PT Serif', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+h1{
+    text-transform: capitalize;
+}
+.wrapper{
+    max-width: 567px;
+    margin: 4rem 6rem 2rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    place-items: auto;
+}
+
+.wrapper2 img{
+    width:140px;
+    height: 200px;
+}
+
+.wrapper2{
+    
+    display: grid;
+    grid-template-rows: .5fr 1fr .5fr .5fr 1fr .5fr ;
+    grid-template-areas:'a . c' 
+    'a b c'
+    '. b .'
+    'd . f'
+    'd e f'
+    '. e .';
+    place-items: center;
+   
+}
+
+.wrapper h4{
+    margin: .75rem 0 1rem 0 ;
+}
+
+main p{
+    font-style: var(--font-pop);
+    transform-origin: left;
+    transform: translateX(110%) translateY(-1800%)  rotate(90deg);
+    
+}
+
+.wrapper2 p{
+    font-family: var(--font-pt);
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: capitalize;
+    letter-spacing: .06rem;
+    font-weight: 550;
+}
+.card1{
+    padding: 0 2rem;
+    grid-area: a;
+}
+
+.card2{
+    padding: 0 2rem;
+    grid-area: b;
+}
+
+.card3{
+    padding:0 2rem;
+    grid-area: c;
+}
+
+.card4{
+    padding: 0 2rem;
+    grid-area: d;
+}
+
+.card5{
+    padding: 0 2rem;
+    grid-area: e;
+}
+
+.card6{
+    padding: 0 2rem;
+    grid-area: f;
+}
+
+h6{
+    font-family: var(--font-pop);
+   
+    font-size: 14px;
+}
+
+@media screen and (max-width:700px) {
+   body{
+      
+
+   }
+
+    .wrapper{
+        all:unset;
+        max-width: 355px;
+       display: block;
+       margin: 1em 4.5em;
+     }
+
+     .wrapper h1{
+         font-family: var(--font-pt);
+         font-size: 36px;
+     }
+
+     .wrapper p{
+         font-family: var(--font-pop);
+         font-size: 14px;
+     }
+     .wrapper h4{
+         font-family: var(--font-pop);
+         font-size: 18px;
+         margin: 2rem 0 1rem 0;
+     }
+
+    .wrapper2{
+        min-width: 408px;
+        place-items: center;
+        grid-template-areas: 'a .'
+                             'a b'
+                             '. b'
+                             'c .'
+                             'c d'
+                             '. d'
+                             'e .'
+                             'e f'
+                             '. f'
+                            '. .';
+        ;
+    }
+}
+
+.pb{
+    text-align: center;
+    font-style: var(--font-mon);
+    font-size: 14px;
+    color:#A9A9A9;
+    font-weight: 400;
+}
